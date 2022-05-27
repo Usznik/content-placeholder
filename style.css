@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+*
+{
+    box-sizing: border-box;
+    /*The box-sizing CSS property sets how the total width and height of an element is calculated.*/
+}
+body
+{
+    background-color: #1A1A1D;
+    font-family: 'Roboto','sans-serif';
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+}
+
+img
+{
+    max-width: 100%;
+}
+.card
+{
+    box-shadow: 0 2px 10px rgb(255,255,255);
+    background-color: aliceblue;
+    border-radius: 10px;
+    overflow: hidden;
+    /*The overflow CSS shorthand property sets the desired behavior for an element's overflow — i.e. when an element's content is too big to fit in its block formatting context — in both directions.*/
+    width: 350px;
+
+}
+.animated-bg
+{
+    background-image: linear-gradient(to right, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 200% 100%;;
+    animation: bgPos 2s linear infinite;
+}
+.card-header
+{
+    height: 200px;
+}
+.card-header img
+{
+    object-fit: cover; /*The object-fit CSS property sets how the content of a replaced element, such as an <img> or <video>, should be resized to fit its container.*/
+    height: 100%;
+    width: 100%;
+}
+.card-content
+{
+ background-color: #fff;
+ padding: 30px;
+}
+.card-title
+{
+    height: 20px;
+    margin: 0;
+}
+.card-excerpt
+{
+    color: #777;
+    margin: 10px;
+}
+.author
+{
+    display: flex;
+
+}
+.profile-img
+{
+    border-radius: 50%;
+    overflow: hidden;
+}
+.author-info
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-left: 10px;
+    width: 100%;
+}
+.author-info small{
+    margin-bottom: 20px;
+}
+
+@keyframes bgPos {
+    0%
+    {
+        background-position: 50% 0;
+    }
+    100%
+    {
+        background-position: -150% 0;
+    }
+}
